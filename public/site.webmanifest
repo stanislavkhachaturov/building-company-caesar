@@ -1,0 +1,15 @@
+{
+  "name": "СК «ЦЕЗАРЬ» — строительные работы полного цикла",
+  "short_name": "СК ЦЕЗАРЬ",
+  "description": "Строительство домов, ремонт квартир, монтаж и демонтаж, кровля и вывоз строительного мусора в Нальчике и КБР.",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08090b",
+  "theme_color": "#08090b",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

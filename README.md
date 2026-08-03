@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Сайт-визитка СК «ЦЕЗАРЬ»
 
-## Getting Started
+Одностраничный сайт строительной компании: строительство домов, ремонт квартир, монтаж/демонтаж,
+кровля, бригады разнорабочих и вывоз строительного мусора. Нальчик, КБР и КМВ.
 
-First, run the development server:
+Стек: **Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Motion**.
+Собирается в статику (`output: "export"`) — заливается на любой хостинг без Node.js.
+
+## Команды
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev        # локальная разработка, http://localhost:3000
+pnpm build      # статическая сборка в ./out
+pnpm lint
+pnpm typecheck
+pnpm assets     # перекачать и пережать фотографии (см. ниже)
+pnpm brand      # пересобрать favicon-иконки и og.jpg из public/favicon.svg
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Деплой
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`pnpm build` кладёт готовый сайт в `out/`. Дальше любой из вариантов:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Vercel / Netlify / Cloudflare Pages** — подключить репозиторий, команда сборки `pnpm build`,
+  директория `out`.
+- **Обычный хостинг / VPS с nginx** — скопировать содержимое `out/` в корень сайта.
 
-## Learn More
+Перед публикацией поменяйте `url` в `src/lib/site.ts` на боевой домен — от него строятся канонический
+адрес, `sitemap.xml`, `robots.txt` и Open Graph.
 
-To learn more about Next.js, take a look at the following resources:
+## Где что править
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Практически весь текст сайта лежит в одном файле — **`src/lib/site.ts`**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Что                            | Экспорт                        |
+| ------------------------------ | ------------------------------ |
+| Телефон, WhatsApp, город, часы | `site`                         |
+| Пункты меню                    | `navLinks`                     |
+| Шесть услуг                    | `services`                     |
+| Преимущества и цифры           | `advantages`, `stats`          |
+| Этапы работы                   | `processSteps`                 |
+| Портфолио и фильтры            | `projects`, `projectCategories` |
+| Отзывы                         | `reviews`                      |
+| Вопросы-ответы                 | `faq`                          |
 
-## Deploy on Vercel
+### Что стоит проверить перед запуском
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Телефон** `8 980 000-84-08` перенесён с визитки как есть. В `site.phoneHref` и `site.whatsapp`
+  он записан в формате `+79800008408` — сверьтесь, что это рабочий номер WhatsApp.
+- **Цифры в блоке статистики** (`stats`) и **отзывы** (`reviews`) — примерные, их нужно заменить на
+  реальные, иначе это обещания, которые компания не подтверждает.
+- **Реквизиты в футере** — сейчас указано только название. Если есть ИП/ООО и ИНН, добавьте их в
+  `site.legalName` и футер.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Фотографии
+
+Все изображения лежат в `public/images/*.webp` и описаны в `src/lib/images.generated.ts`
+(путь, размеры, blur-заглушка для плавной загрузки). Файл генерируется скриптом, руками его не правят.
+
+Сейчас используются стоковые фотографии с [Unsplash](https://unsplash.com/license) — их можно
+свободно использовать в коммерческих проектах. Чтобы поставить реальные фото объектов:
+
+1. Положите снимки в `public/images/` под теми же именами (`project-house-1.webp` и т.д.), либо
+2. Впишите свои источники в `SOURCES` внутри `scripts/prepare-assets.mjs` и запустите `pnpm assets`.
+
+Названия и метраж работ задаются отдельно, в массиве `projects` в `src/lib/site.ts`.
+
+## Заявки
+
+Бэкенда нет. Форма в блоке «Контакты» собирает поля в текст и открывает WhatsApp с готовым
+сообщением — заявка приходит прямо в мессенджер. Если позже понадобится приём заявок на сервер,
+менять нужно только `handleSubmit` в `src/components/Contacts.tsx`.
+
+## Структура
+
+```
+src/
+  app/          layout с метаданными и JSON-LD, страница, robots.ts, sitemap.ts, globals.css
+  components/   секции страницы (Hero, Services, About, Process, Portfolio, Reviews, Faq, Contacts)
+    ui/         примитивы: кнопки, заголовок секции, анимация появления, счётчик
+  lib/          контент сайта и сгенерированный манифест изображений
+scripts/        подготовка фотографий и иконок
+```
