@@ -41,7 +41,7 @@ export function Portfolio() {
   }, [lightbox, visible.length]);
 
   return (
-    <section id="portfolio" className="relative scroll-mt-24 overflow-hidden py-24 lg:py-32">
+    <section id="portfolio" className="relative overflow-hidden py-24 lg:py-32">
       <div className="absolute inset-0 -z-10 bg-ink-900" aria-hidden="true" />
       <div
         className="absolute top-1/3 -right-40 -z-10 h-[32rem] w-[32rem] rounded-full bg-brand-600/8 blur-[140px]"

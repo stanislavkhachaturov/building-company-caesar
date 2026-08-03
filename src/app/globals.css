@@ -89,8 +89,34 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5.5rem;
     -webkit-text-size-adjust: 100%;
+  }
+
+  /*
+    Якоря секций: id стоит на <section> с py-24 / lg:py-32, а визуальный
+    старт — у заголовка. scroll-margin = высота хедера − padding-top секции,
+    чтобы eyebrow вставал сразу под fixed-хедер (без двойного «чёрного» зазора).
+  */
+  #services,
+  #about,
+  #process,
+  #portfolio,
+  #reviews,
+  #faq,
+  #contacts {
+    scroll-margin-top: calc(5.25rem - 6rem);
+  }
+
+  @media (min-width: 1024px) {
+    #services,
+    #about,
+    #process,
+    #portfolio,
+    #reviews,
+    #faq,
+    #contacts {
+      scroll-margin-top: calc(5.75rem - 8rem);
+    }
   }
 
   body {

@@ -9,7 +9,7 @@ import { advantages, site, stats } from "@/lib/site";
 
 export function About() {
   return (
-    <section id="about" className="relative scroll-mt-24 overflow-hidden py-24 lg:py-32">
+    <section id="about" className="relative overflow-hidden py-24 lg:py-32">
       <div className="absolute inset-0 -z-10 bg-ink-900" aria-hidden="true" />
       <div className="blueprint-grid absolute inset-0 -z-10 opacity-70" aria-hidden="true" />
       <div

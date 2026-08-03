@@ -5,7 +5,7 @@ import { reviews } from "@/lib/site";
 
 export function Reviews() {
   return (
-    <section id="reviews" className="relative scroll-mt-24 overflow-hidden py-24 lg:py-32">
+    <section id="reviews" className="relative overflow-hidden py-24 lg:py-32">
       <div
         className="absolute bottom-0 left-0 -z-10 h-[26rem] w-[26rem] -translate-x-1/3 rounded-full bg-brand-700/10 blur-[130px]"
         aria-hidden="true"

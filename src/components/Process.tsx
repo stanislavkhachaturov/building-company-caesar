@@ -8,7 +8,7 @@ import { processSteps, site } from "@/lib/site";
 
 export function Process() {
   return (
-    <section id="process" className="relative scroll-mt-24 overflow-hidden py-24 lg:py-32">
+    <section id="process" className="relative overflow-hidden py-24 lg:py-32">
       <div className="shell">
         <SectionHeading
           eyebrow="Как мы работаем"

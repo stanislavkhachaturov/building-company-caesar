@@ -10,7 +10,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative scroll-mt-24 py-24 lg:py-32">
+    <section id="faq" className="relative py-24 lg:py-32">
       <div className="absolute inset-0 -z-10 bg-ink-900" aria-hidden="true" />
       <div className="blueprint-grid absolute inset-0 -z-10 opacity-70" aria-hidden="true" />
 

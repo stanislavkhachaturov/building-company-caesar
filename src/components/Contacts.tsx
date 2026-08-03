@@ -88,7 +88,7 @@ export function Contacts() {
     "w-full rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3.5 text-[0.93rem] text-fog-100 placeholder:text-fog-500 transition-colors duration-300 outline-none focus:border-brand-500/70 focus:bg-ink-950";
 
   return (
-    <section id="contacts" className="relative scroll-mt-24 overflow-hidden py-24 lg:py-32">
+    <section id="contacts" className="relative overflow-hidden py-24 lg:py-32">
       <Image
         src={images.cta.src}
         alt=""

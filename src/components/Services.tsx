@@ -6,7 +6,7 @@ import { services } from "@/lib/site";
 
 export function Services() {
   return (
-    <section id="services" className="relative scroll-mt-24 overflow-hidden py-24 lg:py-32">
+    <section id="services" className="relative overflow-hidden py-24 lg:py-32">
       <div
         className="absolute top-0 right-0 -z-10 h-[30rem] w-[30rem] translate-x-1/3 rounded-full bg-brand-600/8 blur-[140px]"
         aria-hidden="true"
