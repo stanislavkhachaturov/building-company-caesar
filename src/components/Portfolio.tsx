@@ -57,7 +57,7 @@ export function Portfolio() {
                 Наши <span className="text-gradient-brand">работы</span>
               </>
             }
-            description="Дома, квартиры и отдельные виды работ, которые мы сдали заказчикам в Нальчике, по республике и на Кавминводах."
+            description="Дома, квартиры и отдельные виды работ, которые мы сдали заказчикам на Кавминводах."
           />
 
           <div className="flex flex-wrap gap-2 lg:shrink-0" role="tablist" aria-label="Фильтр работ">
@@ -185,13 +185,13 @@ export function Portfolio() {
                 blurDataURL={images[open.image].blurDataURL}
                 className="max-h-[72vh] w-full rounded-2xl object-cover"
               />
-              <figcaption className="mt-5 flex flex-wrap items-center justify-between gap-4">
-                <span>
+              <figcaption className="mt-5 flex items-center justify-between gap-4">
+                <span className="min-w-0 flex-1">
                   <span className="block text-[1.15rem] font-semibold text-fog-100">{open.title}</span>
                   <span className="mt-1 block text-[0.85rem] text-fog-400">{open.meta}</span>
                 </span>
 
-                <span className="flex items-center gap-2">
+                <span className="flex shrink-0 items-center gap-2">
                   <button
                     type="button"
                     onClick={() => step(-1)}

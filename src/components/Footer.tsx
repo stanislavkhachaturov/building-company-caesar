@@ -19,7 +19,7 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-5 max-w-xs text-[0.88rem] leading-relaxed text-fog-400">
-              {site.tagline}. {site.taglineSecondary}. Работаем в Нальчике, по Кабардино-Балкарии и на КМВ.
+              {site.tagline}. {site.taglineSecondary}. Работаем на Кавказских Минеральных Водах.
             </p>
             <div className="mt-6 flex gap-2.5">
               <a

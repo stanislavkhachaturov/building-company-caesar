@@ -39,7 +39,7 @@ const CONTACT_CARDS = [
     href: site.whatsapp,
     note: "Ответим за 15 минут",
   },
-  { icon: MapPin, label: "Работаем", value: "Нальчик, КБР и КМВ", note: "Выезд на объект бесплатный" },
+  { icon: MapPin, label: "Работаем", value: site.region, note: "Выезд на объект бесплатный" },
   { icon: Clock, label: "График", value: "Ежедневно 8:00–21:00", note: "Без выходных" },
 ];
 

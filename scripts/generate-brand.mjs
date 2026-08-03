@@ -62,7 +62,7 @@ const overlay = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}
   <g transform="translate(80 300)">
     <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="bold" fill="#F4F6F8" letter-spacing="2">СК «ЦЕЗАРЬ»</text>
     <text x="0" y="66" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#F0921F">Полный цикл строительных работ</text>
-    <text x="0" y="122" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#B9C1CC">От фундамента до отделки · Нальчик, КБР и КМВ</text>
+    <text x="0" y="122" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#B9C1CC">От фундамента до отделки · Кавминводы</text>
     <text x="0" y="196" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="bold" fill="#F4F6F8">8 980 000-84-08</text>
   </g>
 </svg>`);
