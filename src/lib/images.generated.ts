@@ -31,7 +31,7 @@ export const images = {
     "src": "/images/project-house-1.webp",
     "width": 1280,
     "height": 960,
-    "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoUAA8APu1kq04ppaQiMAgBMB2JQBOmUABp7QgNd/ztuBuoAP4xGS5Mrt3WeTKq5tzzF8XcbGLbrKuh1m3YMI+dLOqnI9/qW2DCwlC0g41KAAAA"
+    "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgDG9CHgD19DYLSTlaAA/uhmVvUdYVvFk2VnHt5rZc8Km0R1EmBW8TvdlC4WrR5BZEcIzYKD4VusC71EAA=="
   },
   "project-house-2": {
     "src": "/images/project-house-2.webp",
@@ -43,13 +43,13 @@ export const images = {
     "src": "/images/project-house-3.webp",
     "width": 1280,
     "height": 960,
-    "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoUAA8APu1kq04ppaQiMAgBMB2JZQAASl5uNGj+D9+mRNaAAP7XFUreTOnSkb6mh/iOSZgfjT9jTXwShVU7sGzum/zJgZ4vO8oq8hctBrL3/kD8YAA="
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JZQDE2CEI/AFDyvN/NNAA/ucgMrAdA6ShQChpDFpMC+7cYdYlfeAgYqan69W9EERVP70OvMZpRAAA"
   },
   "project-house-4": {
     "src": "/images/project-house-4.webp",
     "width": 1280,
     "height": 960,
-    "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACQBACdASoUAA8APu1kqk2ppaQiMAgBMB2JZACdMoMh1EooSLeVOX2CX+ZS3ZgA/d0Qf/+yCKxgNtl76Fn++HTbtWoQ886o2fwiVFDYMgxIP6iy0se/AG2UJFN2VJlKmSw3j60AAAA="
+    "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZQCw7B7FS4MiZEhTCoc8hAAA/rGTHtB9CeSVRjzVb2hpeo3nCgmUSi9eOigkzwAAAA=="
   },
   "project-flat-1": {
     "src": "/images/project-flat-1.webp",
@@ -97,7 +97,7 @@ export const images = {
     "src": "/images/project-work-4.webp",
     "width": 1280,
     "height": 960,
-    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAwCdASoUAA8APu1oqk6ppiQiMAgBMB2JZQAAUU1WX3rDe+LAAP653W9BV/bRECRQ8XpKF1SsMRHwJVByWyfzqICAc5IAAAA="
+    "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAwCdASoUAA8APu1kqk2ppaQiMAgBMB2JZwDImCHe6LzBZWvlQVgA/si8C44cA4hYOE1Qx17tkg1GwrIDGwCAAAA="
   }
 } satisfies Record<string, SiteImage>;
 
