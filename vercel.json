@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/yandex_03e5e6b20a9fc708.html",
+      "destination": "/yandex_03e5e6b20a9fc708/"
+    }
+  ]
+}

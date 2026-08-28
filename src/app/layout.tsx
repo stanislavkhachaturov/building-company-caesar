@@ -62,6 +62,9 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   robots: { index: true, follow: true },
+  verification: {
+    yandex: "03e5e6b20a9fc708",
+  },
 };
 
 export const viewport: Viewport = {
