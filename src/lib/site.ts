@@ -16,7 +16,7 @@ export const site = {
   cities: ["Пятигорск", "Кисловодск", "Ессентуки", "Железноводск", "Минеральные Воды", "Лермонтов"],
   hours: "Ежедневно с 8:00 до 21:00",
   responseTime: "Отвечаем в течение 15 минут",
-  url: "https://sk-cezar.ru",
+  url: "https://building-company-caesar.vercel.app",
 } as const;
 
 export const navLinks = [
